@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Titles from './components/Titles';
+import DateComponent from './components/Date';
+import TopNews from './components/TopNews';
+import Currencies from './components/Currencies';
+import Education from './components/Education';
+import SearchBlock from './components/SearchBlock';
+import Banner from './components/Banner';
+import Weather from './components/Weather';
+import Popular from './components/Popular';
+import MapLink from './components/MapLink';
+import TVSchedule from './components/TVSchedule';
+import RadioSchedule from './components/RadioSchedule';
+import topNews from './data/top_news';
+
+
+import titles from './data/titles'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Titles titles={titles} />
+      <DateComponent />
+      <TopNews news={topNews} />
+      <Currencies />
+      <Education />
+      <SearchBlock />
+      <Banner />
+      <Weather />
+      <Popular />
+      <MapLink />
+      <TVSchedule />
+      <RadioSchedule />
     </div>
   );
 }
